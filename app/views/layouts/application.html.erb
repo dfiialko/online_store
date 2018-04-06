@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <div class="ui segment" id="header_outline">
+    <div class="ui five item menu">
+      <a class="item">
+        HOME
+      </a>
+      <a class="item">
+        JOBS
+      </a>
+      <a class="item">
+        ABOUT
+      </a>
+      <a class="item">
+        CATALOGS
+      </a>
+      <a class="item">
+        CONTACT US
+      </a>
+    </div>
+  </div>
+
+    <%= yield %>
+  </body>
+</html>

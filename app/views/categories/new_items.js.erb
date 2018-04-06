@@ -1,0 +1,6 @@
+var fill = document.querySelector("#partial_load")
+fill.innerHTML = "<%= j render partial: 'categories/new_items' %>"
+var item_sale = document.getElementById('sale_item_div');
+var new_item = document.getElementById('new_item_div');
+new_item.classList.add('active');
+item_sale.classList.remove('active');

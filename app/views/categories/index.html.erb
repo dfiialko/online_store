@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+  <div class="ui grid">
+<div class="four wide column">
+<table class="ui single line table" style="table-layout: auto">
+  <thead class="thead-dark">
+    <tr >
+      <th scope="col" id="tablehead_categories">Categories</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @categories.each do |category| %>
+      <tr>
+        <td>
+          <%= link_to category do %>
+            <%= simple_format(h(category.name)) %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+  </div>
+
+  <div class="ten wide column">
+    <div class="ui pointing menu">
+
+      <div class="active item" id="new_item_div">
+        <i class="bell outline icon"> </i>
+        <%= link_to 'New Items',new_items_categories_path,remote: true, method: :get %>
+      </div>
+      <div class="item" id="sale_item_div">
+        <i class="money bill alternate outline icon"></i>
+        <%= link_to 'Items on Sale',onsale_items_categories_path,remote: true, method: :get %>
+      </div>
+      <div class="right menu">
+        <div class="item">
+          <div class="ui transparent icon input">
+            <input type="text" placeholder="Search...">
+            <i class="search link icon"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ui segment" id="partial_load">
+      <%= render partial: 'categories/new_items' %>
+    </div>
+        </div>
+    <% if user_signed_in? %>
+      <div class="two wide column">
+        <div class="ui segments">
+          <div class="ui segment">
+      <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+          </div>
+        </div>
+      </div>
+      <% else %>
+    <div class="two wide column">
+      <div class="ui horizontal segments">
+        <div class="ui segment">
+     <%= link_to 'Sign In', new_user_session_path%>
+        </div>
+        <div class="ui segment">
+      <%= link_to 'Sign Up', new_user_registration_path%>
+        </div>
+      </div>
+    </div>
+      <% end %>
+</div>

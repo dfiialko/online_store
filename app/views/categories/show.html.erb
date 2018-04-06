@@ -1,0 +1,28 @@
+<p>
+  <strong>Name:</strong>
+  <%= @category.name %>
+</p>
+<%= link_to 'Back', categories_path %>
+<p>
+<table class="table">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Qty</th>
+    <th>Manufacturer</th>
+  </tr>
+  </thead>
+<tbody>
+<% @products.each do |p| %>
+<tr>
+  <td><%= p.name %></td>
+  <td><%= p.price %></td>
+  <td><%= p.qty %></td>
+  <td><%= p.manufacturer.name %></td>
+</tr>
+<% end %>
+<%= paginate @products %>
+</tbody>
+</table>
+</p>

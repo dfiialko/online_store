@@ -1,0 +1,11 @@
+  <div class="ui grid">
+    <div class="three column row">
+      <% @new_products.each do |p| %>
+        <div class="column">
+          <%= image_tag p.image_url(:normal) unless p.image.blank? %>
+          <p><%= p.name %></p>
+        </div>
+      <%end%>
+    </div>
+    </p>
+  </div>

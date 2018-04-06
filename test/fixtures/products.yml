@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  category: one
+  title: MyString
+  description: MyString
+  url_key: MyString
+  url_path: MyString
+  price: 9.99
+  qty: 1
+  articul: MyString
+  units: MyString
+  packaging: 1
+  instock: false
+
+two:
+  name: MyString
+  category: two
+  title: MyString
+  description: MyString
+  url_key: MyString
+  url_path: MyString
+  price: 9.99
+  qty: 1
+  articul: MyString
+  units: MyString
+  packaging: 1
+  instock: false

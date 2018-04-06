@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @manufacturer.name %>
+</p>
+
+<p>
+  <strong>Products:</strong>
+  <%= @manufacturer.products %>
+</p>
+
+<ul class="list-group">
+  <% @manufacturer.categories.each do |man_cat| %>
+  <li class="list-group-item">  <%= man_cat.name %> </li>
+  <% end %>
+</ul>
+
+<%= link_to 'Edit', edit_manufacturer_path(@manufacturer) %> |
+<%= link_to 'Back', manufacturers_path %>
