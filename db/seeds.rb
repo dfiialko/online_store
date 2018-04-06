@@ -13,7 +13,7 @@ options = {file_encoding: 'utf-8',
                          units: :units, instock: :is_in_stock}}
 products = SmarterCSV.process(csv_file,options)
 
- AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+# AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
 
 Product.transaction do
   products.each do |product_info|
