@@ -7,8 +7,8 @@
   <%= f.label :name_cont,"Name contains" %>
   <%= f.text_field :name_cont %>
   </div>
+  <%= f.collection_select :category_id_eq, Category.all, :id, :name, include_blank: true %>
   <div class="actions"><%= f.submit "Search" %></div>
-  <%= f.collection_select :category_id, Category.order(:name),:id,:name, include_blank: true %>
   <% end %>
 
 <table>
