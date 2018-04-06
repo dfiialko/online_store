@@ -1,7 +1,7 @@
 require 'smarter_csv'
 require 'rails'
 
-ManufacturerCategory.delete_all
+#ManufacturerCategory.delete_all
 Product.destroy_all
 Category.destroy_all
 Manufacturer.destroy_all
