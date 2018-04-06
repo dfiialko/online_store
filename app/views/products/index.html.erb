@@ -8,7 +8,9 @@
   <%= f.text_field :name_cont %>
   </div>
   <div class="actions"><%= f.submit "Search" %></div>
+  <%= f.collection_select :category_id, Category.order(:name),:id,:name, include_blank: true %>
   <% end %>
+
 <table>
   <thead>
     <tr>
