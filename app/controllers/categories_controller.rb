@@ -4,6 +4,8 @@ class CategoriesController < ApplicationController
   # GET /categories
   # GET /categories.json
   def index
+    @search = Product.search(params[:q])
+    @result = @search.result
     @categories = Category.all
   end
 

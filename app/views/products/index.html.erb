@@ -2,6 +2,12 @@
 
 <h1>Products</h1>
 
+<%= search_form_for @products do |f| %>
+  <div class="field">
+  <%= f.label :name_cont,"Name contains" %>
+  <%= f.text_field :name_cont %>
+  </div>
+  <% end %>
 <table>
   <thead>
     <tr>
